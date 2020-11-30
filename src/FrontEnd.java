@@ -3,7 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.function.ToDoubleBiFunction;
 
 
 public class FrontEnd extends JFrame {
@@ -18,7 +17,8 @@ public class FrontEnd extends JFrame {
     JTextField player1Score;
     JTextField player2Score;
     JTextField enterN1;
-    JTextField enterN2, winner;
+    JTextField enterN2;
+    JTextArea winner;
     ArrayList<JTextField> textFieldList;
     Boolean turn;
 
@@ -77,8 +77,8 @@ public class FrontEnd extends JFrame {
 
 
         //PanelStart
-        this.enterN1 = new JTextField("Player1");
-        this.enterN2 = new JTextField("Player2");
+        this.enterN1 = new JTextField("Player 1");
+        this.enterN2 = new JTextField("Player 2");
 
         this.textFieldList.add(enterN1);
         this.textFieldList.add(enterN2);
@@ -92,7 +92,7 @@ public class FrontEnd extends JFrame {
         this.throwDice.addActionListener(throwDice);
         this.throwDice.setBackground(Color.red);
 
-        this.showDice = new JTextField("DiceArea");
+        this.showDice = new JTextField("Dice Result Area");
         this.textFieldList.add(showDice);
         showDice.setEditable(false);
         this.player1Name = new JTextField("");
@@ -113,10 +113,12 @@ public class FrontEnd extends JFrame {
         this.player2Score.setEditable(false);
         this.player1Score.setBackground(Color.red);
         this.player2Score.setBackground(Color.green);
+
         //GameOver
-        this.winner = new JTextField();
-        this.textFieldList.add(winner);
-        this.restartButton = new JButton("Back");
+        this.winner = new JTextArea();
+       // this.textFieldList.add(winner);
+        winner.setEditable(false);
+        this.restartButton = new JButton("Play again?");
         Back back = new Back();
         this.restartButton.addActionListener(back);
         setFieldFont();
@@ -134,7 +136,7 @@ public class FrontEnd extends JFrame {
 
     public void BackEndStart() {
         this.BackEnd.randomStarter();
-        this.throwDice.setText("Press here: " + BackEnd.currentPlayerName());
+        this.throwDice.setText("Roll the die! \n" + BackEnd.currentPlayerName() +"'s tur to roll!");
         this.player1Name.setText(BackEnd.getPlayer1());
         this.player2Name.setText(BackEnd.getPlayer2());
         player1Score.setText(BackEnd.player1Score());
@@ -149,7 +151,7 @@ public class FrontEnd extends JFrame {
     }
 
     public void showDice() {
-        this.showDice.setText("Dice shows: " + BackEnd.getDice());
+        this.showDice.setText(BackEnd.currentPlayerName() + "'s dice shows: " + BackEnd.getDice());
 
     }
 
@@ -161,7 +163,7 @@ public class FrontEnd extends JFrame {
         this.setVisible(true);
 
         setButton();
-        this.throwDice.setText("Press Here:" + BackEnd.currentPlayerName());
+        this.throwDice.setText("Roll die! \n" + BackEnd.currentPlayerName() +"'s tur to roll!");
         if (BackEnd.gameOver()) {
             activateGameOver();
         }
