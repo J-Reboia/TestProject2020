@@ -44,7 +44,7 @@ public class BackEndTest {
     }
     @Test
     public void checkGameOverAfterAddScore100Points() {
-        dTest.setP1Score(99);
+        dTest.setP1Score(100);
         dTest.setP2Score(99);
         dTest.addScore();
         boolean gameOver = dTest.gameOver();
