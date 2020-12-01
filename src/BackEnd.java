@@ -78,9 +78,7 @@ public class BackEnd {
         this.roundCounter = 0;
 
     }
-    public int getRoundCounter() {
-        return roundCounter;
-    }
+
 
 //Inget ska behöva ändras eller testas koden härunder
 
@@ -123,5 +121,15 @@ public class BackEnd {
         return this.gameOver;
     }
 
+    public int getRoundCounter() {
+        return roundCounter;
+    }
 
+    public void setP1Score(int score) {
+        p1Score = score;
+    }
+
+    public void setP2Score(int score) {
+        p2Score = score;
+    }
 }
