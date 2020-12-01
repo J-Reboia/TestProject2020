@@ -1,5 +1,5 @@
 import javax.swing.*;
-import java.util.function.ToDoubleBiFunction;
+
 
 public class BackEnd {
     private String player1; //Namnet på den ena spelaren
@@ -25,31 +25,6 @@ public class BackEnd {
             return "And the winner is " + player2 + " with " + p2Score + " points!";
         }
     }
-    //fixme getters och setters för test(skall tas bort efter test)
-    public void setP1Score(int p1Score) {
-        this.p1Score = p1Score;
-    }
-
-    public int getP1Score() {
-        return p1Score;
-    }
-
-    public void setP2Score(int p2Score) {
-        this.p2Score = p2Score;
-    }
-
-    public int getP2Score() {
-        return p2Score;
-    }
-
-    public void setPlayer1(String player1) {
-        this.player1 = player1;
-    }
-
-    public void setPlayer2(String player2) {
-        this.player2 = player2;
-    }
-    //fixme getters och setters för test(skall tas bort efter test)
 
     // Ska returnera namnet på den spelaren i tur utifrån värdet på currentplayer
     public String currentPlayerName(){
@@ -103,6 +78,9 @@ public class BackEnd {
         this.roundCounter = 0;
 
     }
+    public int getRoundCounter() {
+        return roundCounter;
+    }
 
 //Inget ska behöva ändras eller testas koden härunder
 
@@ -144,5 +122,6 @@ public class BackEnd {
     public boolean gameOver(){
         return this.gameOver;
     }
+
 
 }
