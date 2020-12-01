@@ -1,5 +1,5 @@
 import javax.swing.*;
-import java.util.function.ToDoubleBiFunction;
+
 
 public class BackEnd {
     private String player1; //Namnet på den ena spelaren
@@ -78,6 +78,9 @@ public class BackEnd {
         this.roundCounter = 0;
 
     }
+    public int getRoundCounter() {
+        return roundCounter;
+    }
 
 //Inget ska behöva ändras eller testas koden härunder
 
@@ -119,5 +122,6 @@ public class BackEnd {
     public boolean gameOver(){
         return this.gameOver;
     }
+
 
 }

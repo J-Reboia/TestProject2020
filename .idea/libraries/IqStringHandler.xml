@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="IqStringHandler">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../projectCodeTest2020/Del2 Filer/IqStringHandler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/IqStringHandler.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
