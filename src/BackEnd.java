@@ -37,7 +37,7 @@ public class BackEnd {
 
     //Sätter this.currentPlayer till 1 eller 2 baserat på slumpen.
     public void randomStarter(){
-        currentPlayer = (int) (Math.random() * 2) + 1 ;
+        currentPlayer = (int) (Math.random() * 2);
     }
 
     //Returnerar en sträng med spelare1:s namn följt av "Score: " samt spelare1:s poäng
@@ -78,7 +78,9 @@ public class BackEnd {
         this.roundCounter = 0;
 
     }
-
+    public int getRoundCounter() {
+        return roundCounter;
+    }
 
 //Inget ska behöva ändras eller testas koden härunder
 
@@ -121,23 +123,5 @@ public class BackEnd {
         return this.gameOver;
     }
 
-    public int getRoundCounter() {
-        return roundCounter;
-    }
 
-    public void setP1Score(int score) {
-        p1Score = score;
-    }
-
-    public void setP2Score(int score) {
-        p2Score = score;
-    }
-    
-    public void setPlayer1(String p1) {
-        this.player1 = p1;
-    }
-
-    public void setPlayer2(String p2) {
-        this.player2 = p2;
-    }
 }
