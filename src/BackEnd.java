@@ -19,43 +19,64 @@ public class BackEnd {
 
     //Ska returnera en sträng: "And the Winner is " samt namnet på den spelare som har högst poäng
     public String getWinner(){
-        //TODO
-        return "Not implemented";
+        if(p1Score >= 100){
+            return "And the winner is " + player1 + " with " + p1Score + " points!";
+        } else {
+            return "And the winner is " + player2 + " with " + p2Score + " points!";
+        }
     }
 
     // Ska returnera namnet på den spelaren i tur utifrån värdet på currentplayer
     public String currentPlayerName(){
-        //TODO
-        return "Not implemented";
-
+        if(currentPlayer == 1){
+            return player1;
+        } else {
+            return player2;
+        }
     }
 
     //Sätter this.currentPlayer till 1 eller 2 baserat på slumpen.
     public void randomStarter(){
-        //TODO
+        currentPlayer = (int) (Math.random() * 2);
     }
 
     //Returnerar en sträng med spelare1:s namn följt av "Score: " samt spelare1:s poäng
     public String player1Score(){
-        //TODO
-        return "Not implemented";
+
+        return player1 + " score is: " + p1Score;
 
     }
     //Returnerar en sträng med spelare2:s namn följt av "Score: " samt spelare2:s poäng
     public String player2Score(){
-        //TODO
-        return "Not implemented";
+
+        return player2 + " score is: " + p2Score;
     }
 
     //Ger this.Dice ett värde mellan 1 och 20, samt ökar this.roundCounter med 1;
     public void throwDice(){
-        //TODO
+        this.roundCounter++;
+        this.dice = (int) (1 + Math.random()*20);
     }
     // Lägger till värdet på this.dice till den aktuelle spelaren poäng
     // Nollställer därefter this.dice och this.roundCounter
     //Kollar sedan om någon av spelarna har nått 100 poäng och om så är fallet sätts gameOver till true;
     public void addScore(){
-        //TODO
+        int player = getCurrentPlayer();
+
+        if(player ==1){
+            p1Score = this.dice + p1Score;
+            currentPlayer = 2;
+        } else {
+            p2Score = this.dice + p2Score;
+            currentPlayer = 1;
+        }
+
+        if(p1Score >= 100 || p2Score >=100) {
+            gameOver = true;
+        }
+        this.dice = 0;
+        this.roundCounter = 0;
+
     }
 
 //Inget ska behöva ändras eller testas koden härunder
@@ -74,7 +95,9 @@ public class BackEnd {
             int reply = JOptionPane.showConfirmDialog(null, "Roll again?" , this.player1, JOptionPane.YES_NO_OPTION);
             if (reply == JOptionPane.NO_OPTION) {
                 addScore();
-            }else {return;}
+            }else {
+                return;
+            }
         } else{
             addScore();
         }
