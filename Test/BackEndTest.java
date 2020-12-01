@@ -8,7 +8,7 @@ public class BackEndTest {
 
     @Test()
     public void throwDiceTest() {
-        for(int i = 0; i<100; i++) {
+        for(int i = 0; i<1000; i++) {
             dTest.throwDice();
             int diceNumber = dTest.getDice();
             System.out.println(diceNumber);
@@ -19,9 +19,11 @@ public class BackEndTest {
     @Test
     public void checkRoundCounterAfterDiceThrow() {
         dTest.throwDice();
+        dTest.throwDice();
         int roundCounter = dTest.getRoundCounter();
         System.out.println(roundCounter);
         Assert.assertTrue(roundCounter != 0 && roundCounter <=3);
+        dTest.addScore();
     }
 
 
