@@ -43,13 +43,33 @@ public class BackEndTest {
         Assert.assertTrue(dice == 0);
     }
     @Test
-    public void checkGameOverAfterAddScore100Points() {
+    public void checkGameOverAfterAddScore100PointsP1() {
         dTest.setP1Score(100);
         dTest.setP2Score(99);
         dTest.addScore();
         boolean gameOver = dTest.gameOver();
         System.out.println(gameOver);
         Assert.assertTrue(gameOver);
+    }
+
+    @Test
+    public void checkGameOverAfterAddScore100PointsP2() {
+        dTest.setP1Score(99);
+        dTest.setP2Score(100);
+        dTest.addScore();
+        boolean gameOver = dTest.gameOver();
+        System.out.println(gameOver);
+        Assert.assertTrue(gameOver);
+    }
+
+    @Test
+    public void checkGameOverAfterAddScoreLessThen100Points() {
+        dTest.setP1Score(99);
+        dTest.setP2Score(99);
+        dTest.addScore();
+        boolean gameOver = dTest.gameOver();
+        System.out.println(gameOver);
+        Assert.assertFalse(gameOver);
     }
 
 
