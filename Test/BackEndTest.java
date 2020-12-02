@@ -71,7 +71,7 @@ public class BackEndTest {
         System.out.println(gameOver);
         Assert.assertFalse(gameOver);
     }
-
+    @Test
     public void testGetWinner() throws Exception{
         dTest.setPlayer1("P1");
         dTest.setPlayer2("P2");
@@ -85,15 +85,16 @@ public class BackEndTest {
         dTest.setP2Score(0);
         Assert.assertEquals("And the winner is P2 with 0 points!", dTest.getWinner());
     }
+    @Test
     public void testCurrentPlayerName() throws Exception {
         dTest.setPlayer2("P1");
         dTest.setPlayer2("P2");
         dTest.randomStarter();
         if (dTest.getCurrentPlayer()==1) {
-            Assert.assertEquals("P1",dTest.currentPlayerName());
+            Assert.assertEquals("P1",dTest.getCurrentPlayer());
         }
         else if (dTest.getCurrentPlayer()==2) {
-            Assert.assertEquals("P2", dTest.currentPlayerName());
+            Assert.assertEquals("P2", dTest.getCurrentPlayer());
         }
     }
 
