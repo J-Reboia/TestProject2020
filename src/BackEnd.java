@@ -37,7 +37,7 @@ public class BackEnd {
 
     //Sätter this.currentPlayer till 1 eller 2 baserat på slumpen.
     public void randomStarter(){
-        currentPlayer = (int) (Math.random() * 2);
+        currentPlayer = (int) (Math.random() * 2) + 1 ;
     }
 
     //Returnerar en sträng med spelare1:s namn följt av "Score: " samt spelare1:s poäng
