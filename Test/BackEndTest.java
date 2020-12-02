@@ -80,22 +80,36 @@ public class BackEndTest {
         dTest.setP1Score(100);
         dTest.setP2Score(99);
         Assert.assertEquals("And the winner is P1 with 100 points!", dTest.getWinner());
+        dTest.setP1Score(4000);
+        dTest.setP2Score(2000);
+        Assert.assertEquals("And the winner is P1 with 4000 points!", dTest.getWinner());
+        dTest.setP1Score(400);
+        dTest.setP2Score(2000);
+        Assert.assertEquals("And the winner is P1 with 400 points!", dTest.getWinner());
+        dTest.setP1Score(-100);
+        dTest.setP2Score(2038);
+        Assert.assertEquals("And the winner is P2 with 2038 points!", dTest.getWinner());
         dTest.setP1Score(0);
         dTest.setP2Score(0);
         Assert.assertEquals("And the winner is P2 with 0 points!", dTest.getWinner());
     }
+
     @Test
-    public void testCurrentPlayerName(){
-        dTest.setPlayer2("P1");
-        dTest.setPlayer2("P2");
-        dTest.randomStarter();
-        if (dTest.getCurrentPlayer()==1) {
-            Assert.assertEquals("P1",dTest.currentPlayerName());
-        }
-        else if (dTest.getCurrentPlayer()==2) {
-            Assert.assertEquals("P2", dTest.currentPlayerName());
+    public void testCurrentPlayerNameAndRandomStarter() {
+        for (int i = 0; i < 50; i++) {
+            dTest.setPlayer1("P1");
+            dTest.setPlayer2("P2");
+            dTest.randomStarter();
+            if (dTest.getCurrentPlayer() == 1) {
+                Assert.assertEquals("P1", dTest.currentPlayerName());
+                System.out.println(dTest.currentPlayerName());
+            } else if (dTest.getCurrentPlayer() == 2) {
+                Assert.assertEquals("P2", dTest.currentPlayerName());
+                System.out.println(dTest.currentPlayerName());
+            }
         }
     }
+
 
 
 }
