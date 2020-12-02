@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="junit-4.13.1">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/junit-4.13.1.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../../Program Files (x86)/Java/Junit 4.14.1" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../../../../Program Files (x86)/Java/Junit 4.14.1" recursive="false" />
   </library>
 </component>
