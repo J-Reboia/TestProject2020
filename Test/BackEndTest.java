@@ -1,7 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.annotation.Repeatable;
 
 public class BackEndTest {
     BackEnd dTest = new BackEnd();
@@ -86,15 +85,15 @@ public class BackEndTest {
         Assert.assertEquals("And the winner is P2 with 0 points!", dTest.getWinner());
     }
     @Test
-    public void testCurrentPlayerName() throws Exception {
+    public void testCurrentPlayerName(){
         dTest.setPlayer2("P1");
         dTest.setPlayer2("P2");
         dTest.randomStarter();
         if (dTest.getCurrentPlayer()==1) {
-            Assert.assertEquals("P1",dTest.getCurrentPlayer());
+            Assert.assertEquals("P1",dTest.currentPlayerName());
         }
         else if (dTest.getCurrentPlayer()==2) {
-            Assert.assertEquals("P2", dTest.getCurrentPlayer());
+            Assert.assertEquals("P2", dTest.currentPlayerName());
         }
     }
 
