@@ -132,4 +132,12 @@ public class BackEnd {
     public void setP2Score(int score) {
         p2Score = score;
     }
+    
+    public void setPlayer1(String p1) {
+        this.player1 = p1;
+    }
+
+    public void setPlayer2(String p2) {
+        this.player2 = p2;
+    }
 }
