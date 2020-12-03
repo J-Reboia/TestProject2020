@@ -7,7 +7,7 @@ import java.util.function.ToDoubleBiFunction;
 
 
 public class FrontEnd extends JFrame {
-    BackEnd  BackEnd;
+    BackEnd BackEnd;
     JPanel panel1;
     JPanel panelStart;
     JPanel GameOverPanel;
