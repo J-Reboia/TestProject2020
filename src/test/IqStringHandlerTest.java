@@ -105,9 +105,31 @@ public class IqStringHandlerTest extends TestCase {
 
     public void testScatterString1() {
         for (int i = 0; i<1000000; i++) {
-            Assert.assertNotEquals("123456789", Iqh.scatterString("123456789"));
+            Assert.assertNotEquals("123456789", Iqh.scatterString("123456789")); //fixme metoden verkar ej ha validering för att return blir annorlunda än input
         }
     }
+
+    public void testZip1() {
+        Assert.assertEquals("adbecf", Iqh.zip("abc","def"));
+    }
+    public void testZip2() {
+        Assert.assertEquals("\\/\\/\\/", Iqh.zip("\\\\\\", "///"));
+    }
+
+    public void testUnZip1() {
+        /*
+        String[] arr = Iqh.unzip("abcdef");//fixme metod verkar ej finnas
+        Assert.assertEquals("abc", arr[0]);
+        Assert.assertEquals("def",arr[1]);
+         */
+    }
+
+    public void testRemoveVowels1() {
+
+        //Assert.assertEquals("zbr",Iqh.removeVowels("zebra"));//fixme metod verkar ej finnas
+    }
+
+
     @After
     public void tD() throws Exception {
         tearDown();

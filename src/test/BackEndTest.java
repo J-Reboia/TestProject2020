@@ -12,6 +12,8 @@ public class BackEndTest {
         dTest.setPlayer1("P1");
         dTest.setP1Score(49);
         Assert.assertEquals("P1 score is: 49", dTest.player1Score());
+        dTest.setP1Score(-99);
+        Assert.assertEquals("P1 score is: -99", dTest.player1Score());
     }
 
     @Test
