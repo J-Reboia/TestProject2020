@@ -8,6 +8,22 @@ public class BackEndTest {
     BackEnd dTest = new BackEnd();
 
     @Test
+    public void player1ScoreTest() {
+        dTest.setPlayer1("P1");
+        dTest.setP1Score(49);
+        Assert.assertEquals("P1 score is: 49", dTest.player1Score());
+        dTest.setP1Score(-99);
+        Assert.assertEquals("P1 score is: -99", dTest.player1Score());
+    }
+
+    @Test
+    public void player2ScoreTest() {
+        dTest.setPlayer2("P2");
+        dTest.setP2Score(999);
+        Assert.assertEquals("P2 score is: 999", dTest.player2Score());
+    }
+
+    @Test
     public void throwDiceTest() {
         for(int i = 0; i<1000; i++) {
             dTest.throwDice();
