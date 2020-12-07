@@ -103,6 +103,12 @@ public class IqStringHandlerTest extends TestCase {
 
     }
 
+    public void testReadString2() {
+        File temp = new File("temp.txt");
+        Assert.assertEquals(".txt",Iqh.readString("temp.txt"));//om ingen sökväg hittas, och argumentet är av jämn längd, returneras sista halvan i filepath
+        Assert.assertEquals(null,Iqh.readString("temp.jpeg")); //om argumentet är av ojämn längd returneras null
+    }
+
     public void testScatterString1() {
         for (int i = 0; i<1000000; i++) {
             Assert.assertNotEquals("123456789", Iqh.scatterString("123456789")); //fixme metoden verkar ej ha validering för att return blir annorlunda än input
@@ -114,6 +120,9 @@ public class IqStringHandlerTest extends TestCase {
     }
     public void testZip2() {
         Assert.assertEquals("\\/\\/\\/", Iqh.zip("\\\\\\", "///"));
+    }
+    public void testZip3() {
+        Assert.assertEquals("HOellalo", Iqh.zip("Hello","Ola")); //fixme olika längder på argumenten fungerar ej
     }
 
     public void testUnZip1() {
