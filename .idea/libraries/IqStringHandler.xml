@@ -1,6 +1,8 @@
 <component name="libraryTable">
   <library name="IqStringHandler">
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files/Java/IqStringHandler.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>
