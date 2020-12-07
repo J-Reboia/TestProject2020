@@ -80,17 +80,16 @@ public class IqStringHandlerTest extends TestCase {
     }
 
     public void testReadString1() {
-        //String defaultTempDir = System.getProperty("java.io.tmpdir");
         PrintWriter out;
         Scanner fileScanner;
         String s = "";
         try {
             File temp = File.createTempFile("temp", ".txt");
             out = new PrintWriter(temp);
+            fileScanner = new Scanner(temp);
             out.print("Lorem ipsum");
             out.println("dolor sit amet.");
             out.close();
-            fileScanner = new Scanner(temp);
             while (fileScanner.hasNextLine()) {
                 s = fileScanner.nextLine();
             }
@@ -99,6 +98,14 @@ public class IqStringHandlerTest extends TestCase {
         }
         catch (IOException e) {
             e.printStackTrace();
+        }
+
+
+    }
+
+    public void testScatterString1() {
+        for (int i = 0; i<1000000; i++) {
+            Assert.assertNotEquals("123456789", Iqh.scatterString("123456789"));
         }
     }
     @After
