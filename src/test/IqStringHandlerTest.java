@@ -34,8 +34,8 @@ public class IqStringHandlerTest extends TestCase {
         Assert.assertEquals(5,Iqh.countConsonants("Assimilate"));
     }
 
-    public void testSize1() {
-        Assert.assertEquals(4,Iqh.size("Four"));
+    public void testSize1() { //fixme Efter 102 tecken blir talen negativa
+        Assert.assertEquals(103,Iqh.size("2223333333333444444444455555555556666666666777777777788888888889999999999000000000010101010101010101010"));
     }
 
     public void testSize2() {
