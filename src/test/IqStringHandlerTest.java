@@ -342,15 +342,6 @@ public class IqStringHandlerTest extends TestCase {
         Assert.assertEquals("@F_1",Iqh.lowerHalf("@F_1337!"));
     }
 
-    @Test
-    public void testUpperHalf1() {
-        Assert.assertEquals("Two",Iqh.upperHalf("OneTwo"));
-    }
-
-    @Test
-    public void testUpperHalf2() {
-        Assert.assertNull(Iqh.upperHalf("Seven"));
-    }
 
     @Test
     public void testLowerHalfUpperAlphabetUneven(){
@@ -455,6 +446,15 @@ public class IqStringHandlerTest extends TestCase {
         //TODO Can't handle more then 50 chars.
     }
 
+    @Test
+    public void testUpperHalf1() {
+        Assert.assertEquals("Two",Iqh.upperHalf("OneTwo"));
+    }
+
+    @Test
+    public void testUpperHalf2() {
+        Assert.assertNull(Iqh.upperHalf("Seven"));
+    }
 
     @Test
     public void testUpperHalfUpperAlphabetUneven(){
@@ -724,7 +724,7 @@ public class IqStringHandlerTest extends TestCase {
         String shouldBe = "A1b2C3d/E&%";
         String combinedString =  Iqh.zip(firstHalf,secondHalf);
         System.out.println(combinedString);
-      //  Assert.assertEquals(shouldBe,combinedString);
+        Assert.assertEquals(shouldBe,combinedString);
         //TODO doesn't work. Removes the last char if uneven.
     }
 
@@ -750,7 +750,7 @@ public class IqStringHandlerTest extends TestCase {
 
     @Test
     public void testZip3() {
-        // Assert.assertEquals("HOellalo", Iqh.zip("Hello","Ola")); //fixme olika längder på argumenten fungerar ej
+         Assert.assertEquals("HOellalo", Iqh.zip("Hello","Ola")); //fixme olika längder på argumenten fungerar ej
     }
 
     @Test
@@ -807,11 +807,11 @@ public class IqStringHandlerTest extends TestCase {
 
 
 
-    // unzip(); Does not yet exists?! // todo add method Iqh.unzip(); then return to these test :)
+    //fixme Dessa metoder går ej att nå, därför uteblir de.
         /*
         @Test
     public void testUnZip1() {
-        String[] arr = Iqh.unzip("abcdef");//fixme metod verkar ej finnas
+        String[] arr = Iqh.unzip("abcdef");
         Assert.assertEquals("abc", arr[0]);
         Assert.assertEquals("def",arr[1]);
     }
@@ -835,16 +835,16 @@ public class IqStringHandlerTest extends TestCase {
     public void testUnzipMixedEven(){
         Assert.assertArrayEquals(Iqh.unzip("RMaiNDddOLme  !.", ["RaNdOm !", "MiDdLe ."]);
     }
-*/
 
 
 
-    // removeVowels Does not yet exists?! // todo add method Iqh.removeVowels(); then return to these test :)
+
+    // removeVowels Does not yet exists?!
  /*
     @Test
     public void testRemoveVowels1() {
 
-        //Assert.assertEquals("zbr",Iqh.removeVowels("zebra"));//fixme metod verkar ej finnas
+        //Assert.assertEquals("zbr",Iqh.removeVowels("zebra"));
     }
 
     @Test
