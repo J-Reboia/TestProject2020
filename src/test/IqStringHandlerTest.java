@@ -43,7 +43,7 @@ public class IqStringHandlerTest extends TestCase {
     @Test
     public void testCountConsonantsTest() {
         int numberOfConsonants = Iqh.countConsonants(testString102Chars);
-       // Assert.assertEquals(40, numberOfConsonants); //Asserts the number of consonants in the string.
+        Assert.assertEquals(40, numberOfConsonants); //Asserts the number of consonants in the string.
         //TODO Seems to count all input instead of just vowels.
     }
 
@@ -55,7 +55,7 @@ public class IqStringHandlerTest extends TestCase {
     @Test
     public void testCountConsonants2() {
         //fixme registrerar versaler som konsonanter
-        //  Assert.assertEquals(5,Iqh.countConsonants("Assimilate"));
+          Assert.assertEquals(5,Iqh.countConsonants("Assimilate"));
     }
 
     @Test
@@ -77,11 +77,11 @@ public class IqStringHandlerTest extends TestCase {
         System.out.println(consonant);
         System.out.println(notC);
 
-        // Assert.assertEquals(Iqh.countConsonants("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),21); // "29"
-        // Assert.assertEquals(Iqh.countConsonants("abcdefghijklmnopqrstuvxyzåäö"),21); // "19"
+        Assert.assertEquals(Iqh.countConsonants("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),21); // "29"
+        Assert.assertEquals(Iqh.countConsonants("abcdefghijklmnopqrstuvxyzåäö"),21); // "19"
         Assert.assertEquals(Iqh.countConsonants("BCDFGHJKLMNPQRSTVWXYZ"),21);
-        // Assert.assertEquals(Iqh.countConsonants("AEIOUÅÄÖ"),0); // "8"
-        //  Assert.assertEquals(Iqh.countConsonants("aeiouåäö"),0);  // "-1" whoa?!?!
+        Assert.assertEquals(Iqh.countConsonants("AEIOUÅÄÖ"),0); // "8"
+        Assert.assertEquals(Iqh.countConsonants("aeiouåäö"),0);  // "-1" whoa?!?!
         Assert.assertEquals(Iqh.countConsonants("ä"),-1); // WHYYYYYY??????
 
     }
@@ -105,11 +105,11 @@ public class IqStringHandlerTest extends TestCase {
         System.out.println(consonant);
         System.out.println(notc);
 
-        //  Assert.assertEquals(Iqh.countConsonants("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),21); // "29"
-        //  Assert.assertEquals(Iqh.countConsonants("abcdefghijklmnopqrstuvxyzåäö"),21); // "19"
+        Assert.assertEquals(Iqh.countConsonants("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),21); // "29"
+        Assert.assertEquals(Iqh.countConsonants("abcdefghijklmnopqrstuvxyzåäö"),21); // "19"
         Assert.assertEquals(Iqh.countConsonants("BCDFGHJKLMNPQRSTVWXYZ"),21);
-        // Assert.assertEquals(Iqh.countConsonants("AEIOUÅÄÖ"),0); // "8"
-        // Assert.assertEquals(Iqh.countConsonants("aeiouåäö"),0); // "-1" whoa?!?!
+        Assert.assertEquals(Iqh.countConsonants("AEIOUÅÄÖ"),0); // "8"
+        Assert.assertEquals(Iqh.countConsonants("aeiouåäö"),0); // "-1" whoa?!?!
         Assert.assertEquals(Iqh.countConsonants("ä"),-1); // WHYYYYYY??????
     }
 
@@ -120,14 +120,14 @@ public class IqStringHandlerTest extends TestCase {
     @Test
     public void testCountVowelsTest() {
         int numberOfVowels = Iqh.countVowels(testString102Chars);
-      //  Assert.assertEquals(18, numberOfVowels); //Asserts the number of vowels in the string.
+        Assert.assertEquals(18, numberOfVowels); //Asserts the number of vowels in the string.
         //TODO Doesn't count uppercase letters.
     }
 
     @Test
     public void testCountVowels1() {
         //fixme funkar ej med versaler
-        // Assert.assertEquals(2, Iqh.countVowels("ZOO"));
+        Assert.assertEquals(2, Iqh.countVowels("ZOO"));
     }
 
     @Test
@@ -159,11 +159,11 @@ public class IqStringHandlerTest extends TestCase {
         System.out.println(notV);
         System.out.println(vowels);
 
-        // Assert.assertEquals(Iqh.countVowels("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),9); // "0" Sometings not sitting right
+        Assert.assertEquals(Iqh.countVowels("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),9); // "0" Sometings not sitting right
         Assert.assertEquals(Iqh.countVowels("abcdefghijklmnopqrstuvxyzåäö"),9);
         Assert.assertEquals(Iqh.countVowels("BCDFGHJKLMNPQRSTVWXYZ"),0);
-        // Assert.assertEquals(Iqh.countVowels("AEIOUÅÄÖ"),8); // "0"
-        //  Assert.assertEquals(Iqh.countVowels("aeiouåäö"),8); // "9" ?!
+        Assert.assertEquals(Iqh.countVowels("AEIOUÅÄÖ"),8); // "0"
+        Assert.assertEquals(Iqh.countVowels("aeiouåäö"),8); // "9" ?!
         Assert.assertEquals(Iqh.countVowels("ä"),2); // WHYYYYYY?????? ä är en konsonant värde -1 och en vokal värde 2.
 
     }
@@ -186,11 +186,11 @@ public class IqStringHandlerTest extends TestCase {
         System.out.println(notv);
         System.out.println(vowels);
 
-        // Assert.assertEquals(Iqh.countVowels("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),9); // "0"
+        Assert.assertEquals(Iqh.countVowels("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ"),9); // "0"
         Assert.assertEquals(Iqh.countVowels("abcdefghijklmnopqrstuvxyzåäö"),9);
         Assert.assertEquals(Iqh.countVowels("BCDFGHJKLMNPQRSTVWXYZ"),0);
-        // Assert.assertEquals(Iqh.countVowels("AEIOUÅÄÖ"),8); // "0"
-        //  Assert.assertEquals(Iqh.countVowels("aeiouåäö"),8); // "9" ?!
+        Assert.assertEquals(Iqh.countVowels("AEIOUÅÄÖ"),8); // "0"
+        Assert.assertEquals(Iqh.countVowels("aeiouåäö"),8); // "9" ?!
         Assert.assertEquals(Iqh.countVowels("ä"),2); // WHYYYYYY??????
 
     }
@@ -245,55 +245,34 @@ public class IqStringHandlerTest extends TestCase {
 
 
     // Test corner for invert(); issues with double letters
-    public void testInvertTestersCorner() {
-        // Words consisting of 1 letter will fail.
-        // Words consisting of 3 letter will fail.
-        // Words consisting the same two letters in a row at second and third place (first and second position) will fail at four letters.
-        //      If the same double letter is repeated the word will fail once again and for the next letter.
-        //      Example:
-        //      swwr will fail.
-        //      swwrqr will not fail.
-        //      swwrqrw will not fail.
-        //      swwrqrww will fail.
-        //      swwrqrwwh will fail
-        //      swwrqrwwhg will not fail
+    @Test
+    public void testInvertDouble() {
+        Assert.assertEquals(Iqh.invert("swwr"), "rwws"); // will fail
+    }
 
-
-        // Assert.assertEquals(Iqh.invert("1"), "1"); // seems not able to invert only one char -> java.lang.StringIndexOutOfBoundsException: String index out of range: 1
-        //  Assert.assertEquals(Iqh.invert("123"), "321"); // "23212" Something seems off when trying a three-letter string.
-        // Assert.assertEquals(Iqh.invert("Hej"), "jeH"); // "ejeHe"
-        // Assert.assertEquals(Iqh.invert("Jooo"), "oooJ"); // "ooooJo"
-        // Assert.assertEquals(Iqh.invert("Joooa"), "aoooJ"); // "oaoooJo"
-
-        Assert.assertEquals(Iqh.invert("Joakk"), "kkaoJ");
-        Assert.assertEquals(Iqh.invert("Jooak"), "kaooJ");
-        Assert.assertEquals(Iqh.invert("Jooakk"), "kkaooJ");
-        //  Assert.assertEquals(Iqh.invert("Jook"), "kooJ"); // Fail 4 letters, second and third letter same.
-        //  Assert.assertEquals(Iqh.invert("jiikntiig"), "giitnkiij");
-        Assert.assertEquals(Iqh.invert("tuuhb"), "bhuut");
-        Assert.assertEquals(Iqh.invert("mggypt"), "tpyggm");
-        //Assert.assertEquals(Iqh.invert("KKEEKKEEKK"), "KKEEKKEEKK");
-        Assert.assertEquals(Iqh.invert("mllNMllkkllkk"), "kkllkkllMNllm");
-        //Assert.assertEquals(Iqh.invert("sww"), "wws");
-        // Assert.assertEquals(Iqh.invert("swwr"), "rwws");
-        Assert.assertEquals(Iqh.invert("swwrbc"), "cbrwws");
-        // Assert.assertEquals(Iqh.invert("swwrbcww"), "wwcbrwws");
-        Assert.assertEquals(Iqh.invert("swwrbcwttt"), "tttwcbrwws");
-        Assert.assertEquals(Iqh.invert("swwrbcwwgp"), "pgwwcbrwws");
-        Assert.assertEquals(Iqh.invert("swwrbcwwgpwwtbwwsr"), "rswwbtwwpgwwcbrwws");
-        // Assert.assertEquals(Iqh.invert("swwrbcwwgpwwftqww"), "wwqtfwwpgwwcbrwws");
-
-        Assert.assertEquals(Iqh.invert("swwrqr"), "rqrwws");
-        Assert.assertEquals(Iqh.invert("swwrqrvvbvvrwwsp"), "pswwrvvbvvrqrwws");
-
-        // Example from above in code:
-        //   Assert.assertEquals(Iqh.invert("swwr"), "rwws"); // will fail
+    @Test
+    public void testInvertDoublePlusTwoLetters() {
         Assert.assertEquals(Iqh.invert("swwrqr"), "rqrwws"); // will not fail.
-        Assert.assertEquals(Iqh.invert("swwrqrw"), "wrqrwws"); // will not fail.
-        // Assert.assertEquals(Iqh.invert("swwrqrww"), "wwrqrwws"); // will fail.
-        // Assert.assertEquals(Iqh.invert("swwrqrwwh"), "hwwrqrwws"); // will fail
-        Assert.assertEquals(Iqh.invert("swwrqrwwhg"), "ghwwrqrwws"); // will not fail
+    }
 
+    @Test
+    public void testInvertDoublePlusThreeLetters() {
+        Assert.assertEquals(Iqh.invert("swwrqrw"), "wrqrwws"); // will not fail.
+    }
+
+    @Test
+    public void testInvertDoublePlusThreeLettersPlusDouble() {
+        Assert.assertEquals(Iqh.invert("swwrqrww"), "wwrqrwws"); // will fail.
+    }
+
+    @Test
+    public void testInvertDoublePlusThreeLettersPlusDoublePlusOneLetter() {
+        Assert.assertEquals(Iqh.invert("swwrqrwwh"), "hwwrqrwws"); // will fail
+    }
+
+    @Test
+    public void testInvertDoublePlusThreeLettersPlusDoublePlusTwoLetters() {
+        Assert.assertEquals(Iqh.invert("swwrqrwwhg"), "ghwwrqrwws"); // will not fail
     }
 
 
@@ -320,9 +299,9 @@ public class IqStringHandlerTest extends TestCase {
 
     @Test
     public void testScatterString1() {
-      /*  for (int i = 0; i<1000000; i++) {
+        for (int i = 0; i<1000000; i++) {
             Assert.assertNotEquals("123456789", Iqh.scatterString("123456789")); //fixme metoden verkar ej ha validering för att return blir annorlunda än input
-        } */
+        }
     }
     @Test
     public void testScatterdStringOnlyWhitespace(){
@@ -344,7 +323,7 @@ public class IqStringHandlerTest extends TestCase {
         System.out.println(outputShouldBeNull);
         Assert.assertNull(outputShouldBeNull);
         Assert.assertEquals("ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ,abcdefghijklmnopqrst", outputShouldReturnHalf);
-        //TODO Can't handle more then 50 chars.
+        //TODO Can't handle more than 50 chars.
     }
 
 
@@ -574,7 +553,7 @@ public class IqStringHandlerTest extends TestCase {
         int sizeOfStringOver100AndUnEven = Iqh.size(testString102CharsUnEven);
 
         Assert.assertEquals(102, sizeOfString); //Asserts testString102Chars is correctly counted.
-      //  Assert.assertEquals(103, sizeOfStringOver100AndUnEven); //Asserts testString102Chars is correctly counted uneven and over 100 chars.
+        Assert.assertEquals(103, sizeOfStringOver100AndUnEven); //Asserts testString102Chars is correctly counted uneven and over 100 chars.
         //TODO inverts when the count is over 100 chars.
     }
 
@@ -590,7 +569,7 @@ public class IqStringHandlerTest extends TestCase {
 
     @Test
     public void testSize1() { //fixme Efter 102 tecken blir talen negativa
-        //Assert.assertEquals(103,Iqh.size("2223333333333444444444455555555556666666666777777777788888888889999999999000000000010101010101010101010"));
+        Assert.assertEquals(103,Iqh.size("2223333333333444444444455555555556666666666777777777788888888889999999999000000000010101010101010101010"));
     }
 
     @Test
